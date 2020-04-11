@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    gap: 5px;
+    width: 95%;
+    margin: auto;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr;
+    height: 90px;
+    gap: 3px;
+}
+.logo{
+    background-color: brown;
+}
+.link{
+    background-color: chartreuse;
+}
+.barra{
+    background-color: darkblue;
+}
+.main{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: 500px;
+    gap: 10px;
+}
+.charts{
+    background-color: darkmagenta;
+}
+.generos{
+    background-color: darkred;
+}
