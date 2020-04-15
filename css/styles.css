@@ -6,6 +6,7 @@
     gap: 5px;
     width: 95%;
     margin: auto;
+   
 }
 header{
     display: grid;
@@ -33,4 +34,11 @@ header{
 }
 .generos{
     background-color: darkred;
+}
+
+.carrousel{
+
+    display: grid;
+    width: 100%;
+    background-color: blue;
 }
