@@ -1,12 +1,20 @@
 *{
     box-sizing: border-box;
 }
+body{
+    background-image: url(../Imagenes/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 .container{
     display: grid;
     gap: 5px;
     width: 95%;
     margin: auto;
    
+}
+div{
+    border-radius: 25px;
 }
 header{
     display: grid;
@@ -15,13 +23,13 @@ header{
     gap: 3px;
 }
 .logo{
-    background-color: brown;
+    background-color: grey;
 }
 .link{
-    background-color: chartreuse;
+    background-color: grey;
 }
 .barra{
-    background-color: darkblue;
+    background-color: grey;
 }
 .main{
     display: grid;
