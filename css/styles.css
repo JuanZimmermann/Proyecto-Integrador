@@ -5,6 +5,7 @@ body{
     background-image: url(../Imagenes/background.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+    margin-top: ;
 }
 .container{
     display: grid;
@@ -53,8 +54,8 @@ header{
    }
 .main{
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
-    height: 500px;
+    grid-template-rows: 1fr 3fr 1fr;
+    height: 1000px;
     gap: 10px;
 }
 .charts{
@@ -67,6 +68,12 @@ header{
 .carrousel{
 
     display: grid;
-    width: 100%;
     background-color: blue;
+}
+
+.foto-carousel{
+width: 600px;
+width: 100%;
+box-sizing: content-box;
+    
 }
