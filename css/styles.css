@@ -8,7 +8,7 @@ body{
 }
 .container{
     display: grid;
-    gap: 5px;
+    gap: 20px;
     width: 95%;
     margin: auto;
    
@@ -23,14 +23,34 @@ header{
     gap: 3px;
 }
 .logo{
-    background-color: grey;
+    margin: auto;
 }
-.link{
-    background-color: grey;
+.img-logo{
+    height: 90px;
+    border-radius: 50%;
+}
+.link-playlist{
+    font-size: 30px;
+    text-decoration: none;
+    margin-top: 30px;
+}
+.link-playlist a{
+    color: #00e8dc; 
+    font-family: 'Biryani', sans-serif;
 }
 .barra{
-    background-color: grey;
+    margin-top: 36px;
 }
+.search{
+    width: 80%;
+    border-radius: 25px;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.514);
+    border: none;   
+    height: 30px;
+    font-size: 16px;
+    color: white;
+   }
 .main{
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
