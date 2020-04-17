@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(../Imagenes/background.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -58,7 +57,28 @@ header{
     gap: 10px;
 }
 .charts{
-    background-color: darkmagenta;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.titulo-charts{
+    background-color: #00e8dc;
+    height: 50px;
+    margin-left: 10px;
+}
+.titulo-charts p{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+.item-charts{
+    background-color: gray;
+    height: 30px;
+}
+.top{
+    display: grid;
+    gap: 6px;
 }
 .generos{
     background-color: darkred;
