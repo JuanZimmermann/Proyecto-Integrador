@@ -2,8 +2,10 @@
     box-sizing: border-box;
 }
 body{
+    background-image: url(../Imagenes/background.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-size: cover;
 }
 .container{
     display: grid;
