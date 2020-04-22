@@ -61,7 +61,7 @@ header{
 .charts{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
 }
 .titulo-charts{
     background-color: #00e8dc;
@@ -74,26 +74,40 @@ header{
     padding: 10px;
     text-align: center;
 }
+.charts-container{
+    display: grid;
+    gap: 20px;
+}
 .item-charts{
-    background-color: gray;
-    height: 30px;
+    border: solid 2px white;
+    height: 90px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 10px;
+    gap: 10px;
+}
+.foto-charts{
+    background-image: url(../Imagenes/charts.jpg);
+    border-radius: 0px;
+    background-size: cover;
+}
+.nombre-charts{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Biryani', sans-serif;
 }
 .top{
     display: grid;
     gap: 6px;
 }
-.generos{
-    background-color: darkred;
-}
-
 
 .foto-carousel{
 width: 100%;
 height: 400px !important;
 
 }
-
-
 
 .playlist-container{
     display: grid;
