@@ -97,7 +97,8 @@ height: 400px !important;
 
 .playlist-container{
     display: grid;
-    grid-template-columns: 40% 60%
+    margin: 50px;
+    grid-template-columns: 40% 60%;
 }
 
 .lista-de-reproducion{
@@ -111,11 +112,11 @@ gap: 10px;
 
 .cancion{
 display: grid;
-background-color: black ;
-color: #00e8dc;
+background-color: rgba(5, 5, 5, 0.678);
+color: #00e8dcab;
     grid-template-columns: 1fr 3fr;
     gap: 5px;
-    border: solid 5px #00e8dc ;
+    border: solid 5px #00e8dc8c ;
 }
 
 .foto-cancion{
@@ -128,24 +129,54 @@ color: #00e8dc;
 }
 
 .texto-cancion{
+   display: grid;
+   grid-template-rows: 1fr 1fr 1fr ;
 
     margin: 10px;
 }
 
-.datos-cancion{
-
-    text-align: right;
-}
-
 
 .titulo-cancion{
+font-size: 8px;
 text-align: center;
-font-size: 20px;
 
 }
 
+.ArtistasyAlbum{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
 
-.datos-cancion1{
+.artista{
+    font-size: 12px;
+    text-align: center;
+}
 
-    text-align: left;
+.album{
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.Audio-Add{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+
+.add-playlist{
+    font-size: 12px;
+    text-align: center;
+}
+
+.boton{
+
+    background-color: red;
+}
+
+.cancion-audio{
+
+    height: 70%;
+
 }
