@@ -86,8 +86,66 @@ header{
     background-color: darkred;
 }
 
+
 .foto-carousel{
 width: 100%;
 height: 400px !important;
 
+}
+
+
+
+.playlist-container{
+    display: grid;
+    grid-template-columns: 40% 60%
+}
+
+.lista-de-reproducion{
+
+display: grid;
+width: 100%;
+grid-template-rows: 150px 150px 150px 150px 150px;
+gap: 10px;
+
+}
+
+.cancion{
+display: grid;
+background-color: black ;
+color: #00e8dc;
+    grid-template-columns: 1fr 3fr;
+    gap: 5px;
+    border: solid 5px #00e8dc ;
+}
+
+.foto-cancion{
+
+    margin: 10px;
+    background-image: url(../Imagenes/regeton.jpg);
+    background-size: cover;
+    background-position: center;
+   
+}
+
+.texto-cancion{
+
+    margin: 10px;
+}
+
+.datos-cancion{
+
+    text-align: right;
+}
+
+
+.titulo-cancion{
+text-align: center;
+font-size: 20px;
+
+}
+
+
+.datos-cancion1{
+
+    text-align: left;
 }
