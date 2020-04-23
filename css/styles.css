@@ -111,15 +111,17 @@ header{
 }
 
 .foto-carousel{
-width: 100%;
+width: 80%;
 height: 400px !important;
+position: relative;
+left: 10%;
 
 }
 
-.carrousel{
 
+
+.carrousel{
     padding-top: 90px;
-    
 }
 
 
