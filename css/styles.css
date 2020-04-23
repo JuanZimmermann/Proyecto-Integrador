@@ -6,6 +6,8 @@ body{
     background-repeat: no-repeat;
     background-size: 100%;
     background-size: cover;
+
+    
 }
 .container{
     display: grid;
@@ -22,6 +24,11 @@ header{
     grid-template-columns: 1fr 2fr 4fr;
     height: 90px;
     gap: 3px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    
+    z-index: 10;
 }
 .logo{
     margin: auto;
@@ -109,10 +116,19 @@ height: 400px !important;
 
 }
 
+.carrousel{
+
+    padding-top: 90px;
+    
+}
+
+
+
 .playlist-container{
     display: grid;
     margin: 50px;
     grid-template-columns: 40% 60%;
+    padding-top: 90px;
 }
 
 .lista-de-reproducion{
@@ -186,11 +202,11 @@ text-align: center;
 
 .boton{
 
-    background-color: red;
+    background-color: #00e8dc;
 }
 
 .cancion-audio{
 
     height: 70%;
-
+    
 }
