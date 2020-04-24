@@ -212,3 +212,17 @@ text-align: center;
     height: 70%;
     
 }
+.maine{
+    display: grid;
+    grid-template-rows: 1fr 3fr 2fr;
+    background-color: #00e8dc;
+}
+.name{
+
+}
+.video{
+
+}
+.details{
+    
+}
