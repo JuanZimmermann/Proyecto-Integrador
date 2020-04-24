@@ -224,8 +224,9 @@ text-align: center;
     margin-top: 110px;
 
 }
-.photo1.1{
-    
+.photo1a{
+    text-align: center;
+    padding-top: 250px;
 }
 .maine{
     display: grid;
@@ -236,11 +237,13 @@ text-align: center;
     width: 800px;
 }
 .name{
-
+    font: bold;
 }
 .video{
-
+    text-align: center;
+    padding-top: 100px;
 }
 .details{
-
+    font: bolder;
+    font-size: 20px;
 }
