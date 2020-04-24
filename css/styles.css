@@ -63,8 +63,6 @@ header{
    }
 .main{
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
-    height: 1000px;
     gap: 10px;
 }
 .charts{
