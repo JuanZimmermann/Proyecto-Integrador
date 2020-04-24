@@ -129,12 +129,14 @@ left: 10%;
 
 
 
+.body-playlist{
+    margin: unset;
+}
 
 .playlist-container{
     display: grid;
-    margin: 50px;
     grid-template-columns: 40% 60%;
-    padding-top: 90px;
+    padding-top: 150px;
 }
 
 .lista-de-reproducion{
