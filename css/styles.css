@@ -135,7 +135,7 @@ left: 10%;
 
 .playlist-container{
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 20% 60% 20%;
     padding-top: 150px;
 }
 
@@ -155,15 +155,20 @@ color: #00e8dcab;
     grid-template-columns: 1fr 3fr;
     gap: 5px;
     border: solid 5px #00e8dc8c ;
+    padding: 10px;
+}
+
+.foto-playlist{
+
+    width: 100%;
+   height: 100%;
+   object-fit: cover;
 }
 
 .foto-cancion{
 
-    margin: 10px;
-    background-image: url(../Imagenes/regeton.jpg);
-    background-size: cover;
-    background-position: center;
-   
+    
+
 }
 
 .texto-cancion{
