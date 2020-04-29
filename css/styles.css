@@ -222,26 +222,38 @@ font-size: 20px;
 .photo1{
     background-color: #00e8dc;
     margin-top: 110px;
-
+    margin-bottom: 20px;
+    height: fit-content;
 }
 .photo1a{
-    text-align: center;
-    padding-top: 250px;
+    padding: 10px;
 }
+
 .maine{
     display: grid;
-    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-rows: 20% 50% 30%;
     background-color: #00e8dc;
     padding: 20px;
     margin-top: 110px;
+    margin-bottom: 20px;
     width: 800px;
+}
+.headline{
+    display: grid;
+    grid-template-columns: 80% 20%;
 }
 .name{
     font: bold;
+    text-align: left;
+    margin-left: 20px;
+}
+.addto{
+    margin-top: 50px;
+    margin-right: 10px;
 }
 .video{
     text-align: center;
-    padding-top: 100px;
+    
 }
 .details{
     font: bolder;
