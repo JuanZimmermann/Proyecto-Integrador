@@ -44,7 +44,15 @@ header{
     font-size: 30px;
     text-decoration: none;
     margin-top: 30px;
+
 }
+
+.link-playlist2{
+
+    text-decoration: none;
+}
+
+
 .link-playlist a{
     color: #00e8dc; 
     font-family: 'Biryani', sans-serif;
@@ -119,9 +127,20 @@ object-fit: cover;
 
 display: grid;
 width: 100%;
-grid-template-rows: 150px 150px 150px 150px 150px;
+grid-template-rows: 50px 150px 150px 150px 150px 150px;
 gap: 10px;
 padding-top: 130px;
+}
+
+.agregar{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.agregar1{
+    text-align: center;
+
 }
 
 .cancion{
@@ -181,12 +200,12 @@ font-size: 20px;
 }
 
 .artista{
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
 }
 
 .album{
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
 }
 
