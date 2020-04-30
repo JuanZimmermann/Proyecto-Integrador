@@ -202,6 +202,8 @@ font-size: 20px;
 .artista{
     font-size: 13px;
     text-align: center;
+    text-decoration: none;
+    color:  #00e8dc ;
 }
 
 .album{
@@ -224,6 +226,8 @@ font-size: 20px;
 .boton{
 
     background-color: #00e8dc;
+    border-radius: 25px ;
+    border: none;
 }
 
 .cancion-audio{
@@ -236,16 +240,19 @@ font-size: 20px;
 
 .main1{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 40% 60%;
     width: 90%;
     margin: auto;
     gap: 35px;
 }
 .photo1{
-    background-color: #00e8dc;
+
     margin-top: 110px;
     margin-bottom: 20px;
     height: fit-content;
+    border: solid 2px;
+    border-color:  #00e8dc;
+    width: fit-content;
 }
 .photo1a{
     padding: 10px;
@@ -254,20 +261,42 @@ font-size: 20px;
 .maine{
     display: grid;
     grid-template-rows: 20% 50% 30%;
-    background-color: #00e8dc;
+    color:  #00e8dc;
     padding: 20px;
     margin-top: 110px;
     margin-bottom: 20px;
+    border-color:  #00e8dc;
+    border: solid 2px;
     
 }
+
+
 .headline{
     display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 50% 50%;
     gap: 10px;
 }
 .albumito{
     display: grid;
-    margin-top: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.boton2{
+
+    background-color: #00e8dc;
+    border-radius: 25px ;
+    border: none;
+    position: relative;
+    top: 18px;
+    left: 20px;
+}
+
+.aadetalle{
+
+    color:  #00e8dc;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
 }
 .name{
     font: bold;
