@@ -231,6 +231,9 @@ font-size: 20px;
     height: 70%;
     
 }
+
+/* Dettalle */
+
 .main1{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -255,7 +258,7 @@ font-size: 20px;
     padding: 20px;
     margin-top: 110px;
     margin-bottom: 20px;
-    width: 800px;
+    
 }
 .headline{
     display: grid;
