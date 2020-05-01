@@ -250,10 +250,13 @@ font-size: 20px;
     height: fit-content;
     border: solid 2px;
     border-color:  #00e8dc;
-    width: fit-content;
 }
 .photo1a{
     padding: 10px;
+    width: 100%;
+}
+.photo1b{
+    width: 100%;
 }
 
 .maine{
@@ -265,7 +268,7 @@ font-size: 20px;
     margin-bottom: 20px;
     border-color:  #00e8dc;
     border: solid 2px;
-    
+    gap: 10px;
 }
 
 
@@ -314,6 +317,31 @@ font-size: 20px;
     font-size: 20px;
 }
 
+@media(max-width:768px){
+    .cancion{
+        width: 90%;
+        position: relative;
+        left: 5%;
+    }
+    .ArtistasyAlbum{
+        display: none;
+    }
+    .photo1{
+        display: none;
+    }
+
+    .main1{
+        grid-template-columns: none;
+        margin: auto;
+        width: 100%;
+        border: unset;
+    }
+    .maine{
+        width: 100%;
+        border: unset;
+    }
+}
+
 @media(max-width:320px){
     header{
         grid-template-columns: 1fr 1fr 1fr;
@@ -359,10 +387,9 @@ font-size: 20px;
     }
     .cancion{
         grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
         width: 100%;
         position: unset;
-        height: 100px;
+        height: unset
     }
     .foto-cancion{
         display: none;
