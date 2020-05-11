@@ -2,8 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: url(../Imagenes/background.jpg);
-    background-repeat: no-repeat;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);;
     background-size: 100%;
     background-size: cover;
     margin: unset;
@@ -29,7 +28,7 @@ header{
     width: 100%;
     z-index: 10;
     background-color: black;
-    border-radius: 25px;   
+    box-shadow: 0 5px 10px 0 rgba(47, 48, 49, 0.4);  
 }
 .logo{
     margin: auto;
