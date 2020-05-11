@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
     background-size: 100%;
     background-size: cover;
     margin: unset;
@@ -27,8 +27,8 @@ header{
     position: fixed;
     width: 100%;
     z-index: 10;
-    background-color: black;
     box-shadow: 0 5px 10px 0 rgba(47, 48, 49, 0.4);  
+    background-image: linear-gradient(to top, #2b2929 0%, #0a0411 100%);
 }
 .logo{
     margin: auto;
