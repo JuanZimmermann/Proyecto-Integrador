@@ -6,7 +6,7 @@ body{
     background-size: 100%;
     background-size: cover;
     margin: unset;
-
+    font-family: sans-serif;
     
 }
 .container{
@@ -142,31 +142,27 @@ grid-template-columns: 1fr 1fr 1fr;
 
 .cancion{
     width: 60%;
-display: grid;
-background-color: rgba(5, 5, 5, 0.678);
-color: #00e8dcab;
+    display: grid;
+    background-color: rgba(5, 5, 5, 0.678);
+    color: #00e8dcab;
     grid-template-columns: 1fr 3fr;
     gap: 5px;
-    border: solid 5px #00e8dc8c ;
     position: relative;
     left: 20%;
     height: 150px;
 }
 
 .foto-playlist{
-
     object-fit: cover;
    width: 100%;
    height: 110px;
 }
 
 .foto-cancion{
-
     padding: 20px;
     width: 100%;
     height: 150px;
     box-sizing: border-box;
-
 }
 
 .texto-cancion{
@@ -212,6 +208,7 @@ font-size: 20px;
 .Audio-Add{
     display: grid;
     grid-template-columns: 2fr 1fr;
+    gap: 6px;
 }
 
 
@@ -247,8 +244,6 @@ font-size: 20px;
     margin-top: 110px;
     margin-bottom: 20px;
     height: fit-content;
-    border: solid 2px;
-    border-color:  #00e8dc;
 }
 .photo1a{
     padding: 10px;
@@ -256,17 +251,16 @@ font-size: 20px;
 }
 .photo1b{
     width: 100%;
+    border-radius: 25px;
 }
 
 .maine{
     display: grid;
     grid-template-rows: 20% 50% 30%;
-    color:  #00e8dc;
+    color: white;
     padding: 20px;
     margin-top: 110px;
     margin-bottom: 20px;
-    border-color:  #00e8dc;
-    border: solid 2px;
     gap: 10px;
 }
 
@@ -290,10 +284,21 @@ font-size: 20px;
     top: 18px;
     left: 20px;
 }
+.boton3{
+    background-color: #00e8dc;
+    border-radius: 50% ;
+    border: none;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    left: 50%;
+    top: 10%;
+    font-size: 30px;
+}
 
 .aadetalle{
-
-    color:  #00e8dc;
+    color:  white;
     text-decoration: none;
     font-size: 20px;
     text-align: center;
