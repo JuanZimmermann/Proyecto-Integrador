@@ -115,7 +115,28 @@ object-fit: cover;
 .carrousel{
     padding-top: 90px;
 }
-
+footer{
+    align-items: center;
+}
+.footerContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 75%;
+    justify-content: space-between;
+    padding: 10px;
+    margin-left: 275px;
+    background-image: linear-gradient(to top, #2b2929 0%, #0a0411 100%);
+}
+.namez{
+    color: white;
+}
+.deeze{
+    height: 175px;
+    width: 200px;
+}
+.socials{
+    color: white;
+}
 .body-playlist{
     margin: unset;
 }
