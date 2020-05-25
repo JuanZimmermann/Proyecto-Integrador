@@ -138,7 +138,7 @@ footer{
 }
 .footerContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 30% 50% 20%;
     width: 100%;
     justify-content: space-between;
     background-image: linear-gradient(to top, #2b2929 0%, #0a0411 100%);
@@ -147,37 +147,40 @@ footer{
 
 }
 .namez{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     color: white;
-    text-align: center;
+    text-align: left;
 }
 .creadores{
-list-style-type: none;
-font-size: 30px;
-
+    display: grid;
+    gap: 2px;
+    list-style-type: none;
+    font-size: 12px;
+    padding-top: 20px;
 }
 .deez{
-    padding: 20px;
+    padding-top: 20px;
+  
 }
 
 .deezer-foto{
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 20%;
 
-    width: 100%;
     height: 110px;
     object-fit: contain;
 
 }
 .socials{
-    text-align: center;
     color: white;
     display: grid;
     grid-template-rows: 1fr 2fr;
+    padding-top: 20px;
 }
 
 .redes{
 
-font-size: 30px;
+font-size: 20px;
 
 }
 
