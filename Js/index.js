@@ -24,7 +24,7 @@ fetch(urlTracks)
     })
 .then(function(datos){
 
-    console.log(datos)
+    console.log(datos);
 
     let lista = document.querySelector('.charts-tracks');
 
@@ -33,7 +33,7 @@ fetch(urlTracks)
     
     cancion.forEach(function(canciones){ 
     
-      lista.innerHTML = '<a href="detalle.html"><div class="item-charts"><p>'+ canciones.title + '</p></div></a>'
+      lista.innerHTML += '<a href="detalle.html"><div class="item-charts"><p>'+ canciones.title + '</p></div></a>';
 
             })   
          } )
@@ -67,7 +67,7 @@ fetch(urlAlbums)
     
     cancion.forEach(function(canciones){ 
     
-      lista2.innerHTML = '<a href="detalle.html"><div class="item-charts"><p>'+ canciones.title + '</p></div></a>'
+      lista2.innerHTML += '<a href="detalle.html"><div class="item-charts"><p>'+ canciones.title + '</p></div></a>'
 
             })   
          } )
@@ -101,7 +101,7 @@ fetch(urlPlaylists)
     
     cancion.forEach(function(canciones){ 
     
-      lista3.innerHTML = '<a href="detalle.html"><div class="item-charts"><p>'+ canciones.title + '</p></div></a>'
+      lista3.innerHTML += '<a href="detalle.html"><div class="item-charts"><p>'+ canciones.title + '</p></div></a>'
 
             })   
          } )

@@ -127,8 +127,10 @@ header{
     padding: 10px;
     text-align: center;
 }
-.charts-tracks{
-    list-style-type: none;
+.charts-tracks, .charts-albums, .charts-playlists{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
 }
 .item-charts{
     border: solid 2px white;
