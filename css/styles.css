@@ -127,6 +127,9 @@ header{
     padding: 10px;
     text-align: center;
 }
+.charts-tracks{
+    list-style-type: none;
+}
 .item-charts{
     border: solid 2px white;
     height: 50px;
