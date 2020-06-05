@@ -414,7 +414,19 @@ font-size: 20px;
     text-align: center;
 }
 
-.aadetalle{
+.detalle-title{
+    color:  white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+.detalle-artist{
+    color:  white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+.detalle-album{
     color:  white;
     text-decoration: none;
     font-size: 20px;

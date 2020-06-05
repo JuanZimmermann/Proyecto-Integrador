@@ -8,6 +8,7 @@ ham.onclick = function(){
     nav.classList.toggle("nav-active")  
 }
 
+//canciones
 
 let topcharts = 'https://api.deezer.com/chart/0/tracks';
 
@@ -33,7 +34,7 @@ fetch(urlTracks)
     
     cancion.forEach(function(canciones){ 
     
-      lista.innerHTML += '<a href="detalle.html"><div class="item-charts"><p>'+ canciones.title + '</p></div></a>';
+      lista.innerHTML += '<a href="detalle.html?id=' + canciones.id + '"><div class="item-charts"><p>'+ canciones.title + '</p></div></a>';
 
             })   
          } )
