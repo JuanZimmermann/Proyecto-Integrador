@@ -374,6 +374,19 @@ font-size: 20px;
 
 /* Dettalle */
 
+.player{
+
+    width: 700px;
+    height: 102px;
+    border: #00e8dc ;
+    border-radius: 35px;
+    border-style: double;
+    border-width: thick;
+   
+
+
+}
+
 .main1{
     display: grid;
     grid-template-columns: 40% 60%;
@@ -392,7 +405,8 @@ font-size: 20px;
     width: 100%;
 }
 .photo1b{
-    width: 100%;
+    height: 400px;
+    width: 400px;
     border-radius: 25px;
 }
 
@@ -432,7 +446,7 @@ font-size: 20px;
 }
 .boton3{
     background-color: #00e8dc;
-    border-radius: 50% ;
+    border-radius: 30px ;
     border: none;
     height: 40px;
     width: 100%;
