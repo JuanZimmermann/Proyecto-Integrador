@@ -162,13 +162,38 @@ object-fit: cover;
 
 
 .generos-Container{
-
-    height: 500px;
+    display: grid;
+    gap: 20px;
+    width: 95%;
+    margin: auto;
+    object-fit: contain;
 }
 
+.contenido-genero{
+    width: 95%;
+    margin-top: 140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr 1fr ;
+    
 
 
+}
 
+.cada-genero{
+display: grid;
+grid-template-rows: 3fr 1fr;
+height: 300px;
+width: 100%;
+ object-fit: contain;
+}
+.foto-genero{
+    height: 200px;
+width: 200px;
+    object-fit: contain;
+}
+
+/* Generos */
 
 /*footer*/
 
@@ -450,6 +475,16 @@ font-size: 20px;
     font-size: 20px;
 }
 
+/* Generos*/
+
+
+
+
+
+
+
+/*Media Queries*/
+
 @media(max-width:768px){
     .cancion{
         width: 90%;
@@ -474,6 +509,9 @@ font-size: 20px;
         border: unset;
     }
 }
+
+
+
 
 @media(max-width:630px){
     header{
