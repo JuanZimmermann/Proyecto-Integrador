@@ -10,14 +10,14 @@ fetch(url)
     })
 .then(function(date){
 
-    let cadagenero  = document.querySelector('.cadagenero')
+    let cadagenero  = document.querySelector('.contenido-genero')
    
 
     let gener = date.data;
 
     gener.forEach(function(genero){
 
-cadagenero.innerHTML += '<div> <img  class="foto-genero"  src="'+ genero.picture  +'"></div><div><a href="detalle.html?id=' + genero.id+'"> '+ genero.name   +'</a></div>'
+cadagenero.innerHTML += '<div class="cadagenero"><div> <img  class="foto-genero"  src="'+ genero.picture  +'"></div><div><a href="detalle.html?id=' + genero.id+'"> '+ genero.name   +'</a></div></div>'
     })
         
        })
