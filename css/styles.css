@@ -49,6 +49,11 @@ header{
 
 }
 
+.link{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+
 .link-playlist2{
 
     text-decoration: none;
@@ -176,22 +181,26 @@ object-fit: cover;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows:  1fr 1fr 1fr 1fr 1fr ;
     gap: 20px;
-    margin-left: 50px;
+    margin-left: 60px;
 
 
 }
 
-.cada-genero{
+.cadagenero{
 display: grid;
-grid-template-rows: 3fr 1fr;
-height: 300px;
-width: 100%;
- object-fit: contain;
-}
-.foto-genero{
-    height: 200px;
+grid-template-rows: 4fr 1fr;
+height: 150px;
 width: 200px;
-    object-fit: contain;
+}
+
+
+
+.texto-genero {
+
+    text-align: left;
+    font-size: 20px;
+    text-decoration: none;
+    color: #0a0411;
 }
 
 /* Generos */
@@ -424,9 +433,18 @@ font-size: 20px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    text-align: center;
     
 }
 
+
+.name{
+ 
+    text-align: center;
+ 
+
+
+}
 
 .headline{
     display: grid;
@@ -455,28 +473,24 @@ font-size: 20px;
 }
 
 .detalle-title{
-    color:  white;
+    color: black;
     text-decoration: none;
-    font-size: 20px;
-    text-align: center;
+    font-size: 30px;
 }
 .detalle-artist{
-    color:  white;
+    color: black;
     text-decoration: none;
     font-size: 20px;
     text-align: center;
 }
 .detalle-album{
-    color:  white;
+    color: black;
     text-decoration: none;
     font-size: 20px;
     text-align: center;
 }
-.name{
-    font: bold;
-    text-align: left;
-    margin-left: 20px;
-}
+
+
 .addto{
     margin-top: 50px;
     margin-right: 10px;
@@ -490,7 +504,7 @@ font-size: 20px;
     font-size: 20px;
 }
 
-/* Generos*/
+
 
 
 
@@ -542,7 +556,7 @@ font-size: 20px;
         border-radius: unset;
         width: 100%;
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns:  1fr;
         gap: 10px;
         transform: translateX(-100%);
         transition: transform 0.5s ease-in;
@@ -555,6 +569,8 @@ font-size: 20px;
     .link{
         margin: auto;
         margin-top: unset;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     .barra{
         display: none;

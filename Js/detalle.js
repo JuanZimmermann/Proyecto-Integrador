@@ -19,7 +19,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
             if(type == 'track'){
                 let photo = document.querySelector('.photo1b');
             photo.src = track.artist.picture;
-
+            
             let title = document.querySelector('.detalle-title');
             title.innerHTML += track.title;
 
@@ -28,6 +28,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
             let album = document.querySelector('.detalle-album');
             album.innerHTML += 'Album: ' + track.album.title;
+        
 
             let player = document.querySelector('iframe');
            player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=3000&height=350&color=00e8dc&layout=dark&size=medium&type=tracks&id=' + trackId + '&app_id=1'
