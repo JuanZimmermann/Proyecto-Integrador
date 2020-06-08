@@ -510,6 +510,10 @@ font-size: 20px;
 
 
 
+.genre-content{
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+}
 
 
 /*Media Queries*/
