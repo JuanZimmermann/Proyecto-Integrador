@@ -18,7 +18,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
             if(type == 'track'){
                 let photo = document.querySelector('.photo1b');
-            photo.src = track.artist.picture;
+            photo.src = track.artist.picture_big;
             
             let title = document.querySelector('.detalle-title');
             title.innerHTML += track.title;
@@ -39,7 +39,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
             }else if(type == 'artist'){
 
                 let photo = document.querySelector('.photo1b');
-            photo.src = track.picture;
+            photo.src = track.picture_big;
 
             let title = document.querySelector('.detalle-title');
             title.innerHTML += track.name;
@@ -52,7 +52,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
             }else if(type == 'playlist'){
 
                 let photo = document.querySelector('.photo1b');
-            photo.src = track.picture;
+            photo.src = track.picture_big;
 
             let title = document.querySelector('.detalle-title');
             title.innerHTML += track.title;
@@ -65,7 +65,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
             }else{
 
                 let photo = document.querySelector('.photo1b');
-            photo.src = track.picture;
+            photo.src = track.picture_big;
 
             let title = document.querySelector('.detalle-title');
             title.innerHTML += track.name;
