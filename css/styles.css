@@ -40,7 +40,7 @@ header{
 }
 .nav-links{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 2fr 3fr;
 }
 .link-playlist{
     font-size: 30px;
@@ -517,6 +517,35 @@ font-size: 20px;
     border-width: thick;
 }
 
+/*Search*/
+
+.resultados{
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+}
+.results-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 6px;
+}
+.busqueda{
+    color: white;
+}
+.results{
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to top, #2b2929 0%, #0a0411 100%);
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    gap: 4px;
+}
+.result-link{
+    text-decoration: none;
+}
 
 /*Media Queries*/
 
