@@ -62,7 +62,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
             let album = document.querySelector('.detalle-album');
             album.innerHTML += 'Number of fans: ' + track.fans;
-            }else{
+            }else {
 
                 let photo = document.querySelector('.photo1b');
             photo.src = track.picture_big;
@@ -70,6 +70,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
             let title = document.querySelector('.detalle-title');
             title.innerHTML += track.name;
             }
+        
 
             
             
