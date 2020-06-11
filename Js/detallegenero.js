@@ -24,13 +24,16 @@ fetch(url)
     
     genero = datos.data;
 
+   
+    
+
 
 
 let lista = document.querySelector('.lista')
     
     genero.forEach(function(genre){ 
     
-     
+
 
      lista.innerHTML += '<li><a href="detalle.html?id=' + genre.id + '&type=' + genre.type + '">' + genre.name + '</a></li>'
 
@@ -59,19 +62,25 @@ fetch(urlgener)
     return respuesta.json();
     
     })
-.then(function(date){
+.then(function(ladata){
 
     
-console.log(date);
+
+    lafoto = ladata.picture_medium
+    
+    
+    eltitulo = ladata.name
 
 
 
     let foto = document.querySelector('.foto-gener')
     let titulo = document.querySelector('.titulo-gener')
     
-    let source = date.picture_medium
-    
-    console.log(source);
+
+    foto.innerHTML += '<img  src="'+ lafoto +'" >'
+
+    titulo.innerHTML +=  eltitulo 
+   
     
 
     
