@@ -205,10 +205,27 @@ width: 200px;
 
 .genre-container{
 display: grid;
-
 height: 600px;
 
 }
+.contenido-genre{
+
+    margin-top: 120px;
+    width: 60%;
+    margin-left: 20%;
+    grid-template-rows: 1fr 4fr;
+    display: grid;
+    border: solid;
+}
+
+.dentro-genre{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+
 
 /* Generos */
 
