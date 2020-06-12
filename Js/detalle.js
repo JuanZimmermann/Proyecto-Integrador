@@ -25,9 +25,11 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
             let artist = document.querySelector('.detalle-artist');
             artist.innerHTML += 'Artist: ' + track.artist.name;
+            artist.href = 'detalle.html?id=' + track.artist.id + '&type=' + track.artist.type;
 
             let album = document.querySelector('.detalle-album');
             album.innerHTML += 'Album: ' + track.album.title;
+            album.href = 'detalle.html?id=' + track.album.id + '&type=' + track.album.type;
         
 
             let player = document.querySelector('iframe');
@@ -62,13 +64,13 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
             let album = document.querySelector('.detalle-album');
             album.innerHTML += 'Number of fans: ' + track.fans;
-            }else {
+            }else if(type == 'album'){
 
                 let photo = document.querySelector('.photo1b');
-            photo.src = track.picture_big;
+            photo.src = track.cover_big;
 
             let title = document.querySelector('.detalle-title');
-            title.innerHTML += track.name;
+            title.innerHTML += track.title;
             }
         
 
