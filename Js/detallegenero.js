@@ -10,7 +10,7 @@ let Id = queryStringObj.get('id');
 console.log(Id);
 
 let proxy = 'https://cors-anywhere.herokuapp.com/';
-let url =  proxy + 'https://api.deezer.com/genre/' + Id + '&limit=10/artists'
+let url =  proxy + 'https://api.deezer.com/genre/' + Id + '/artists'
 
 
 fetch(url)
@@ -30,6 +30,8 @@ fetch(url)
 
 
 let lista = document.querySelector('.lista')
+
+
     
     genero.forEach(function(genre){ 
     

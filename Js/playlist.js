@@ -1,20 +1,58 @@
 let recuperoStorage = localStorage.getItem('playlist');
 let playlist = JSON.parse(recuperoStorage);
 
-playlist.forEach(element => {
-    buscarYMostrarTrack(element);
-});
+let playlistwrapper = document.querySelector('.listadereproduccion')
 
-function buscarYMostrarTrack(element){
-    let proxy = 'https://cors-anywhere.herokuapp.com/';
-    let url = proxy + 'https://api.deezer.com/track/' + element;
+if(recuperoStorage == null  ){
 
+    playlist =[]
+    playlistwrapper.innerHTML += '<h1> no hay canciones en la playlist </h1>'
+    }
+    
+    else{
+    
+        
+    playlist.forEach(function(iframe){
+    
+        buscarYMostrar(iframe)
+        
+        })
+    
+    }
+
+
+    function buscarYMostrar(iframe){
+
+     var proxy = 'https://cors-anywhere.herokuapp.com/'
+    
+    var url = proxy + 'https://api.deezer.com/track/' + iframe;
+    
     fetch(url)
-        .then(function(response){
-            return response.json();
+    .then( function(response){
+    
+    
+    
+        return response.json();
+        
         })
-        .then(function(datos){
-            let lista = document.querySelector('.lista-de-reproduccion');
-            lista.innerHTML += '<div class="cancion"><iframe src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=3000&height=350&color=00e8dc&layout=dark&size=medium&type=tracks&id=' + datos + '&app_id=1" frameborder="0"></iframe></div>'
-        })
-}
+    .then(function(track){
+    
+
+
+            playlistwrapper.innerHTML = '<div> <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=3000&height=350&color=00e8dc&layout=dark&size=medium&type=tracks&id=' + track.id + '&app_id=1" width="600" height="100"></iframe></div> '
+    
+    
+        
+           })
+    
+    .catch(function(error){
+        console.log(error);
+        
+    })
+    
+     }
+    
+     console.log(localStorage)
+     
+    
+    

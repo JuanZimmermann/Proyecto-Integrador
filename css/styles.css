@@ -291,14 +291,19 @@ font-size: 20px;
     margin: unset;
 }
 
-.lista-de-reproducion{
+.playlist-container{
 
-display: grid;
-width: 100%;
-grid-template-rows: 50px 150px 150px 150px 150px 150px;
-gap: 10px;
+    display: grid;
+height: 500px;
+padding-top: 150px;
+
+}
+
+.listadereproducion{
+
+
 padding-top: 130px;
-height: 800px;
+height: 200px;
 }
 
 .agregar{
