@@ -6,7 +6,7 @@ let proxy = 'https://cors-anywhere.herokuapp.com/';
 
 let api = 'https://api.deezer.com/search?q='
 
-let url = proxy + api + search
+let url = proxy + api + search + '&limit=9'
 
 console.log(url);
 
