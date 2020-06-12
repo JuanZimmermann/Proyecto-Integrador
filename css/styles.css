@@ -550,7 +550,7 @@ font-size: 20px;
     margin: auto;
     padding-top: 100px;
 }
-.results-container{
+.results-container, .results-artist{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 6px;

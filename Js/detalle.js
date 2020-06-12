@@ -44,40 +44,43 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
            let recuperoStorage = localStorage.getItem('playlist')
 
-if ( recuperoStorage ==null) {
-    playlist = [];
+        if (recuperoStorage ==null) {
+                 playlist = [];
     
-}else{
+        }else{
 
-playlist = JSON.parse(recuperoStorage)
+            playlist = JSON.parse(recuperoStorage)
 
-}
-
-
-let agregar = document.querySelector('.boton3')
-
-agregar.addEventListener('click', function(pre){
-
-pre.preventDefault();
-
-if(playlist.includes(trackId)){
-
-    let indiceEnELArray = playlist.indexOf(trackId);
-
-    playlist.splice(indiceEnELArray , 1);
-
-    let agregar = document.querySelector('.boton3')
-
-    agregar.innerHTML = 'Agregar a playslist'
-    }
-    else{
+        }
 
         let agregar = document.querySelector('.boton3')
-    
-       
 
-     agregar.innerHTML = 'Quitar de playlist'
-     playlist.push(trackId);
+        if (playlist.includes(trackId)){
+            agregar.innerHTML = 'Quitar de la playlist'
+        }
+
+        
+
+        agregar.addEventListener('click', function(pre){
+
+        pre.preventDefault();
+
+        if(playlist.includes(trackId)){
+
+            let indiceEnELArray = playlist.indexOf(trackId);
+
+            playlist.splice(indiceEnELArray , 1);
+
+         let agregar = document.querySelector('.boton3')
+
+          agregar.innerHTML = 'Agregar a playslist'
+        }
+         else{
+
+         let agregar = document.querySelector('.boton3')
+    
+            agregar.innerHTML = 'Quitar de playlist'
+            playlist.push(trackId);
     }
     
     let playlistparastorage = JSON.stringify(playlist)
@@ -116,6 +119,13 @@ localStorage.setItem('playlist' , playlistparastorage)
 
             let album = document.querySelector('.detalle-album');
             album.innerHTML += 'Number of fans: ' + track.nb_fan;
+
+            let player = document.querySelector('.player')    
+            player.style = 'display: none;'
+
+            let boton = document.querySelector('.boton3')    
+            boton.style = 'display: none;'
+
             }else if(type == 'playlist'){
 
                 let photo = document.querySelector('.photo1b');
@@ -129,6 +139,13 @@ localStorage.setItem('playlist' , playlistparastorage)
 
             let album = document.querySelector('.detalle-album');
             album.innerHTML += 'Number of fans: ' + track.fans;
+
+            let player = document.querySelector('.player')    
+            player.style = 'display: none;'
+
+            let boton = document.querySelector('.boton3')    
+            boton.style = 'display: none;'
+
             }else if(type == 'album'){
 
                 let photo = document.querySelector('.photo1b');
@@ -136,6 +153,13 @@ localStorage.setItem('playlist' , playlistparastorage)
 
             let title = document.querySelector('.detalle-title');
             title.innerHTML += track.title;
+
+            let player = document.querySelector('.player')    
+            player.style = 'display: none;'
+
+            let boton = document.querySelector('.boton3')    
+            boton.style = 'display: none;'
+            
             }
         
 

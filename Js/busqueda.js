@@ -25,7 +25,21 @@ fetch(url)
 
         resultados.forEach(element => {
             lista.innerHTML += '<a class="result-link" href="detalle.html?id=' + element.id + '&type=' + element.type + '"><div class="results"><img src="' + element.album.cover_small + '"><p>' + element.title_short + '</p></div></a>'
-        });
+        });    
+    })
 
-        
+urlArtist = proxy + 'https://api.deezer.com/search/artist?q=' + search + '&limit=9'
+
+fetch(urlArtist)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        let listaA = document.querySelector('.results-artist')
+        let resultadosA = datos.data
+
+        resultadosA.forEach(element => {
+            listaA.innerHTML += '<a class="result-link" href="detalle.html?id=' + element.id + '&type=' + element.type + '"><div class="results"><img src="' + element.picture_small + '"><p>' + element.name + '</p></div></a>'
+        });   
+
     })

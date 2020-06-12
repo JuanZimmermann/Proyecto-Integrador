@@ -21,33 +21,19 @@ fetch(url)
     })
 .then(function(datos){
 
+    let lista = document.querySelector('.lista')
+    let genero = datos.data
+
+    for(let i=0; i<10; i++){
+        lista.innerHTML += '<li><a href="detalle.html?id=' + genero[1].id + '&type=' + genero[i].type + '">' + genero[i].name + '</a></li>'
+    }
+    console.log(genero.id);
+    console.log(datos);
     
-    genero = datos.data;
-
-   
     
-
-
-
-let lista = document.querySelector('.lista')
-
-
     
-    genero.forEach(function(genre){ 
-    
-
-
-     lista.innerHTML += '<li><a href="detalle.html?id=' + genre.id + '&type=' + genre.type + '">' + genre.name + '</a></li>'
-
-     
-     
-
-            })   
-
-
-         } )
             
-
+})
 .catch(function(error){
 
     console.log(error);
