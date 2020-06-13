@@ -490,7 +490,6 @@ font-size: 20px;
     width: 90%;
     margin: auto;
     gap: 35px;
-    height: 700px;
 }
 .photo1{
 
@@ -518,20 +517,16 @@ font-size: 20px;
 }
 
 .adentrodetalle{
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    
+    color: white;
 }
 
 
 .name{
- 
     text-align: center;
- 
-
-
+    color: white;
 }
 
 .headline{
@@ -561,18 +556,18 @@ font-size: 20px;
 }
 
 .detalle-title{
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 30px;
 }
 .detalle-artist{
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 20px;
     text-align: center;
 }
 .detalle-album{
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 20px;
     text-align: center;
@@ -580,10 +575,12 @@ font-size: 20px;
 
 .top{
     display: none;
+    text-align: center;
     list-style: none;
     padding-left: 5%;
     gap: 5px;
-    width: 80%;
+    width: 70%;
+    margin: auto;
 }
 .topCancion{
     font-size: 20px;
@@ -594,8 +591,16 @@ font-size: 20px;
     padding: 16px;
     height: 50px;
     border-radius: 0%;
+    border-bottom: solid 2px oldlace;
 }
 
+.playlist-top{
+    display: none;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
 
 .addto{
     margin-top: 50px;

@@ -17,118 +17,106 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
         .then(function(track){
 
             if(type == 'track'){
+                let body = document.querySelector('.main1')
+                body.style = 'height: 700px;'
+
                 let photo = document.querySelector('.photo1b');
-            photo.src = track.artist.picture_big;
+                photo.src = track.artist.picture_big;
             
-            let title = document.querySelector('.detalle-title');
-            title.innerHTML += track.title;
+                let title = document.querySelector('.detalle-title');
+                title.innerHTML += track.title;
 
-            let artist = document.querySelector('.detalle-artist');
-            artist.innerHTML += 'Artist: ' + track.artist.name;
-            artist.href = 'detalle.html?id=' + track.artist.id + '&type=' + track.artist.type;
+                let artist = document.querySelector('.detalle-artist');
+                artist.innerHTML += 'Artist: ' + track.artist.name;
+                artist.href = 'detalle.html?id=' + track.artist.id + '&type=' + track.artist.type;
 
-            let album = document.querySelector('.detalle-album');
-            album.innerHTML += 'Album: ' + track.album.title;
-            album.href = 'detalle.html?id=' + track.album.id + '&type=' + track.album.type;
+                let album = document.querySelector('.detalle-album');
+                album.innerHTML += 'Album: ' + track.album.title;
+                album.href = 'detalle.html?id=' + track.album.id + '&type=' + track.album.type;
         
 
-            let player = document.querySelector('iframe');
-           player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=3000&height=350&color=00e8dc&layout=dark&size=medium&type=tracks&id=' + trackId + '&app_id=1'
+                let player = document.querySelector('iframe');
+                player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=3000&height=350&color=00e8dc&layout=dark&size=medium&type=tracks&id=' + trackId + '&app_id=1'
 
 
 
 
 
-           /* Agregar a la playlist */
+                  /* Agregar a la playlist */
 
 
-           let recuperoStorage = localStorage.getItem('playlist')
+                 let recuperoStorage = localStorage.getItem('playlist')
 
-        if (recuperoStorage ==null) {
+                 if (recuperoStorage ==null) {
                  playlist = [];
     
-        }else{
+                  }else{
 
-            playlist = JSON.parse(recuperoStorage)
+                   playlist = JSON.parse(recuperoStorage)
 
-        }
+                  }
 
-        let agregar = document.querySelector('.boton3')
+                 let agregar = document.querySelector('.boton3')
 
-        if (playlist.includes(trackId)){
-            agregar.innerHTML = 'Quitar de la playlist'
-        }
+                 if (playlist.includes(trackId)){
+                      agregar.innerHTML = 'Quitar de la playlist'
+                 }
 
-        
+                agregar.addEventListener('click', function(pre){
 
-        agregar.addEventListener('click', function(pre){
+                pre.preventDefault();
 
-        pre.preventDefault();
+             if(playlist.includes(trackId)){
 
-        if(playlist.includes(trackId)){
+                let indiceEnELArray = playlist.indexOf(trackId);
 
-            let indiceEnELArray = playlist.indexOf(trackId);
+                 playlist.splice(indiceEnELArray , 1);
 
-            playlist.splice(indiceEnELArray , 1);
+              let agregar = document.querySelector('.boton3')
 
-         let agregar = document.querySelector('.boton3')
-
-          agregar.innerHTML = 'Agregar a playlist'
-        }
-         else{
-
-         let agregar = document.querySelector('.boton3')
+                 agregar.innerHTML = 'Agregar a playlist'
+            }else{
+                let agregar = document.querySelector('.boton3')
     
-            agregar.innerHTML = 'Quitar de playlist'
-            playlist.push(trackId);
-    }
+                 agregar.innerHTML = 'Quitar de playlist'
+                 playlist.push(trackId);
+                }
     
-    let playlistparastorage = JSON.stringify(playlist)
+             let playlistparastorage = JSON.stringify(playlist)
 
-localStorage.setItem('playlist' , playlistparastorage)
+            localStorage.setItem('playlist' , playlistparastorage)
 
-    console.log(localStorage);
+            console.log(localStorage);
     
-})
-
-
-
-
-
-
-
-
+            })
 
 
 
 /* cierro*/
-
-
-
 
             }else if(type == 'artist'){
 
                 let artistId = track.id
 
                 let photo = document.querySelector('.photo1b');
-            photo.src = track.picture_big;
+                photo.src = track.picture_big;
 
-            let title = document.querySelector('.detalle-title');
-            title.innerHTML += track.name;
+                let title = document.querySelector('.detalle-title');
+                title.innerHTML += track.name;
 
-            let artist = document.querySelector('.detalle-artist');
-            artist.innerHTML += 'Number of albums: ' + track.nb_album;
+                let artist = document.querySelector('.detalle-artist');
+                artist.innerHTML += 'Number of albums: ' + track.nb_album;
 
-            let album = document.querySelector('.detalle-album');
-            album.innerHTML += 'Number of fans: ' + track.nb_fan;
+                let album = document.querySelector('.detalle-album');
+                album.innerHTML += 'Number of fans: ' + track.nb_fan;
 
-            let player = document.querySelector('.player')    
-            player.style = 'display: none;'
+                let player = document.querySelector('.player')    
+                player.style = 'display: none;'
 
-            let boton = document.querySelector('.boton3')
-            boton.innerHTML = 'Seguir'
+                let boton = document.querySelector('.boton3')
+                boton.innerHTML = 'Seguir'
 
-            urlTop = proxy + 'https://api.deezer.com/artist/' + track.id + '/top?limit=5'
+                urlTop = proxy + 'https://api.deezer.com/artist/' + track.id + '/top?limit=5'
 
             fetch(urlTop)
                 .then(function(response){
@@ -214,6 +202,22 @@ localStorage.setItem('playlist' , playlistparastorage)
             let boton = document.querySelector('.boton3')    
             boton.innerHTML = 'Seguir'
 
+            let urlPlaylist = proxy + 'https://api.deezer.com/playlist/' + track.id + '/tracks'
+            fetch(urlPlaylist)
+                .then(function(response){
+                    return response.json()
+                })
+                .then(function(datos){
+                    let trackPlaylist = document.querySelector('.playlist-top')
+                    let respuesta = datos.data
+
+                    trackPlaylist.style = 'display: grid;'
+
+                    respuesta.forEach(element => {
+                        trackPlaylist.innerHTML += '<a class="topCancion" href="detalle.html?id=' + element.id + '&type=' + element.type + '"><div>' + element.title + '</div></a>'
+                    });
+                })
+
             //seguir a playlist
 
             let recuperaStorage = localStorage.getItem('playlistsFollowed')
@@ -262,13 +266,29 @@ localStorage.setItem('playlist' , playlistparastorage)
             photo.src = track.cover_big;
 
             let title = document.querySelector('.detalle-title');
-            title.innerHTML += track.title;
+            title.innerHTML += 'Album: ' + track.title;
 
             let player = document.querySelector('.player')    
             player.style = 'display: none;'
 
             let boton = document.querySelector('.boton3')    
             boton.style = 'display: none;'
+
+            let urlAlbum = proxy + 'https://api.deezer.com/album/' + track.id + '/tracks'
+            fetch(urlAlbum)
+                .then(function(response){
+                    return response.json()
+                })
+                .then(function(datos){
+                    let respuestas = datos.data
+                    let lista = document.querySelector('.top')
+
+                    lista.style = 'display: grid;'
+
+                    respuestas.forEach(element => {
+                        lista.innerHTML += '<a class="topCancion" href="detalle.html?id=' + element.id + '&type=' + element.type + '"><div>' + element.title + '</div></a>'
+                    });
+                })
             
             }
         
