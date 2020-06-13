@@ -21,11 +21,11 @@ fetch(url)
     })
 .then(function(datos){
 
-    let lista = document.querySelector('.lista')
+    let lista = document.querySelector('.lista-gener')
     let genero = datos.data
 
     for(let i=0; i<10; i++){
-        lista.innerHTML += '<li><a href="detalle.html?id=' + genero[1].id + '&type=' + genero[i].type + '">' + genero[i].name + '</a></li>'
+        lista.innerHTML += '<li class="cada-artista"><a class="decoracion-artista" href="detalle.html?id=' + genero[i].id + '&type=' + genero[i].type + '">' + genero[i].name + '</a></li>'
     }
     console.log(genero.id);
     console.log(datos);

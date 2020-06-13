@@ -184,16 +184,27 @@ object-fit: cover;
 
 .cadagenero{
 display: grid;
+text-align: center;
+padding-top: 15px;
+border: #00e8dc ;
+ border-radius: 35px;
+border-style: double;
+border-width: thick;
+}
+
+.decoracion-genero{
+
+    text-decoration: none;
 }
 
 
 
 .texto-genero {
 
-    text-align: left;
+    text-align: center;
     font-size: 20px;
-    text-decoration: none;
-    color: #0a0411;
+    text-decoration: unset;
+    color: black ;
 }
 
 .genre-container{
@@ -213,6 +224,7 @@ display: grid;
 .dentro-genre{
     display: grid;
     grid-template-rows: 1fr 2fr;
+    
 }
 
 
@@ -220,6 +232,54 @@ display: grid;
 
 
 /* Generos */
+
+/* Generos detalle*/
+
+
+.titulo-gener{
+    text-align: center;
+
+}
+
+.foto-gener{
+
+    text-align: center;
+
+}
+
+.lista-gener{
+
+    text-align: center;
+    list-style: none;
+    font-size: 20px;
+    padding: unset;
+}
+
+.cada-artista{
+
+    margin: 15px;
+     }
+    
+
+.mejores{
+
+    text-align: center;
+    font-size: 25px;
+}
+
+.decoracion-artista{
+
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+
 
 /*footer*/
 
@@ -291,8 +351,18 @@ font-size: 20px;
 
     display: grid;
 height: 500px;
-padding-top: 150px;
+padding-top: 130px;
 
+
+}
+
+.container-playlist{
+
+    width: 60%;
+
+margin-right : 20% ;
+margin-left: 20%;
+border: solid;
 }
 
 .listadereproducion{
@@ -532,12 +602,7 @@ font-size: 20px;
 /*detalle genero*/
 
 
-.genero-foto{
-    border: #00e8dc ;
-    border-radius: 35px;
-    border-style: double;
-    border-width: thick;
-}
+
 
 /*Search*/
 
@@ -722,8 +787,9 @@ font-size: 20px;
     }
 
 
-    .lista-de-reproducion{
-        grid-template-rows: none;
+    .listadereproduccion{
+        border: solid;
+        margin: 50px;
     }
     .agregar{
         display: none;
