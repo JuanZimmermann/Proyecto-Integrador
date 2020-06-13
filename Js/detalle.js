@@ -73,7 +73,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
          let agregar = document.querySelector('.boton3')
 
-          agregar.innerHTML = 'Agregar a playslist'
+          agregar.innerHTML = 'Agregar a playlist'
         }
          else{
 
@@ -108,6 +108,8 @@ localStorage.setItem('playlist' , playlistparastorage)
 
             }else if(type == 'artist'){
 
+                let artistId = track.id
+
                 let photo = document.querySelector('.photo1b');
             photo.src = track.picture_big;
 
@@ -123,10 +125,54 @@ localStorage.setItem('playlist' , playlistparastorage)
             let player = document.querySelector('.player')    
             player.style = 'display: none;'
 
-            let boton = document.querySelector('.boton3')    
-            boton.style = 'display: none;'
+            let boton = document.querySelector('.boton3')
+            boton.innerHTML = 'Seguir'
+
+            //artistas seguidos agregar a lista
+            
+            let recuperaStorage = localStorage.getItem('artistList')
+            
+            if(recuperaStorage == null){
+                artistList=[];
+            }else{
+                artistList = JSON.parse(recuperaStorage);
+            }
+
+            let agrego = document.querySelector('.boton3')
+
+            if(artistList.includes(artistId)){
+                agrego.innerHTML = 'Dejar de seguir'
+            }
+
+            agrego.addEventListener('click', function(pre){
+                pre.preventDefault();
+                if(artistList.includes(artistId)){
+                    let indiceEnElArray = artistList.indexOf(artistId);
+
+                    artistList.splice(indiceEnElArray , 1);
+
+                    let agrego = document.querySelector('.boton3')
+                    agrego.innerHTML = 'Seguir'
+                }else{
+                    let agrego = document.querySelector('.boton3')
+                    agrego.innerHTML = 'Dejar de seguir'
+                    artistList.push(artistId);
+                }
+            
+
+            let artistListParaStorage = JSON.stringify(artistList)
+
+            localStorage.setItem('artistList' , artistListParaStorage)
+
+            console.log(localStorage);
+
+        })
+
+            //playlists 
 
             }else if(type == 'playlist'){
+
+                let playlistId = track.id
 
                 let photo = document.querySelector('.photo1b');
             photo.src = track.picture_big;
@@ -144,7 +190,49 @@ localStorage.setItem('playlist' , playlistparastorage)
             player.style = 'display: none;'
 
             let boton = document.querySelector('.boton3')    
-            boton.style = 'display: none;'
+            boton.innerHTML = 'Seguir'
+
+            //seguir a playlist
+
+            let recuperaStorage = localStorage.getItem('playlistsFollowed')
+
+            if(recuperaStorage == null){
+                playlistsFollowed = [];
+            }else{
+                playlistsFollowed = JSON.parse(recuperaStorage)
+            }
+
+            let agrego = document.querySelector('.boton3')
+
+            if(playlistsFollowed.includes(playlistId)){
+                agrego.innerHTML = 'Dejar de seguir'
+            }
+
+            agrego.addEventListener('click' , function(pre){
+                pre.preventDefault();
+
+                if(playlistsFollowed.includes(playlistId)){
+                    let indiceEnELArray = playlistsFollowed.indexOf(playlistId);
+
+                    playlistsFollowed.splice(indiceEnELArray , 1);
+
+                    let agrego = document.querySelector('.boton3')
+
+                    agrego.innerHTML = 'Seguir'
+                }else{
+
+                    let agrego = document.querySelector('.boton3')
+                    playlistsFollowed.push(playlistId);
+
+                }
+                let playlistsFollowedParaStorage = JSON.stringify(playlistsFollowed)
+
+                localStorage.setItem('playlistsFollowed' , playlistsFollowedParaStorage)
+
+                console.log(localStorage)
+            })
+
+            //si es album no se hace nada
 
             }else if(type == 'album'){
 

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
 </head>
 <body>
     <header>
@@ -18,15 +18,17 @@
                 <div><p class="link-playlist"><a  href="playlist.html">Mi Playlist</a></p></div>
                 
             </div>
-
+            
             <div><p class="link-playlist"><a href="following.html">Siguiendo</a></p></div>
-
+            
+        
             <div><p class="link-playlist"><a  href="generos.html">Generos</a></div>
-
+            
                 <form class="barra" action="resultados.html"  method="GET">
                     <input type="text" name="search" placeholder="Search...">
                     <button type="submit">Search</button>
                 </form>
+          
             
         </div>    
         <div class="hamburger">
@@ -36,24 +38,30 @@
         </div>
         
     </header>
-
-    <div class="resultados">
-        <div class="busqueda"></div>
-
-        <div class="results-container"></div>
-
-        <div class="results-artist"></div>
-
+    <div class="follow-container">
+        <div class="follow-artists">
+            <div class="follow-title-artist">
+                <h1 class="follow-title">Artistas</h1>
+            </div>
+            <div class="follow-list-artist">
+                <ul class="artlist"></ul>
+            </div>
+        </div>
+        <div class="follow-playlists">
+            <div class="follow-title-playlist">
+                <h1 class="follow-title1">Playlists</h1>
+            </div>
+            <div class="follow-list-playlist">
+                <ul class="playlists"></ul>
+            </div>
+        </div>
     </div>
-
-
-
     <footer>
         <div class = 'footerContainer'>
             <div class = 'namez'>
                 <div class = 'deez'>
-                <img class = 'deezer-foto' src="imagenes/deezer.png" alt="deezer logo">
-            </div>
+                    <img class = 'deezer-foto' src="imagenes/deezer.png" alt="deezer logo">
+                </div>
                 <ul class="creadores">
                 <li>Ignacio Cavanagh</li>
                 <li>Horacio Barbeito</li>
@@ -61,22 +69,18 @@
                 </ul>
             </div>
 
-        <div></div>
-
-
-        <div class = 'socials'>
+            <div class = 'socials'>
             <div class="redes">Follow us</div>
             <div class="logos">
                 <div> <img src="imagenes/iconfinder_Instagram_1298747.png" alt=""></div>
                 <div> <img src="imagenes/tweeter.png" alt=""></div>
                 <div><img src="imagenes/facebook.png" alt=""></div>
-            
+                
                 </div>
             </div>
         </div>
     </footer>
-
-    <script src="js/busqueda.js"></script>
-
+    <script src="js/following.js"></script>
 </body>
 </html>
+

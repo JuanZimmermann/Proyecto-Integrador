@@ -40,7 +40,7 @@ header{
 }
 .nav-links{
     display: grid;
-    grid-template-columns: 2fr 2fr 3fr;
+    grid-template-columns: 2fr 2fr 2fr 3fr;
 }
 .link-playlist{
     font-size: 30px;
@@ -49,10 +49,6 @@ header{
 
 }
 
-.link{
-    display: grid;
-    grid-template-columns: 1fr 1fr ;
-}
 
 .link-playlist2{
 
@@ -573,6 +569,49 @@ font-size: 20px;
     text-decoration: none;
 }
 
+/*seguidos*/
+
+.follow-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    padding: 100px;
+    gap: 40px;
+}
+.follow-artists{
+    display: grid;
+    grid-template-rows: 10% 80%;
+    gap: 30px;
+    border: #00e8dc ;
+    border-radius: 35px;
+    border-style: double;
+    border-width: thick;
+}
+.follow-playlists{
+    display: grid;
+    grid-template-rows: 10% 80%;
+    gap: 30px;
+    border: #00e8dc ;
+    border-radius: 35px;
+    border-style: double;
+    border-width: thick;
+}
+
+.follow-title{
+    color: #00e8dc; 
+    font-family: 'Biryani', sans-serif;font-size: 30px;
+    text-align: center;
+    margin-top: 30px
+    
+}
+
+.follow-title1{
+    color: #00e8dc; 
+    font-family: 'Biryani', sans-serif;font-size: 30px;
+    text-align: center;
+    margin-top: 30px
+    
+}
 /*Media Queries*/
 
 @media(max-width:768px){

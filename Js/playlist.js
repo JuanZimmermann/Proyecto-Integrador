@@ -29,7 +29,7 @@ if(recuperoStorage == null || recuperoStorage == '[]'){
         })
         .then(function(track){
     
-            playlistwrapper.innerHTML += '<li><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=3000&height=350&color=00e8dc&layout=dark&size=medium&type=tracks&id=' + track.id + '&app_id=1" width="600" height="100"></iframe></li>'
+            playlistwrapper.innerHTML += '<div><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=3000&height=350&color=00e8dc&layout=dark&size=medium&type=tracks&id=' + track.id + '&app_id=1" width="600" height="100"></iframe></div>'
 
             console.log(trackId);
 
