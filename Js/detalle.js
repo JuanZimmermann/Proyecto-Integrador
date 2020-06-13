@@ -128,6 +128,28 @@ localStorage.setItem('playlist' , playlistparastorage)
             let boton = document.querySelector('.boton3')
             boton.innerHTML = 'Seguir'
 
+            urlTop = proxy + 'https://api.deezer.com/artist/' + track.id + '/top?limit=5'
+
+            fetch(urlTop)
+                .then(function(response){
+                    return response.json()
+                })
+                .then(function(datos){
+                    let top = document.querySelector('.top')
+                    let respuesta = datos.data
+                    top.style = 'display: grid;'
+
+                    respuesta.forEach(element => {
+                        top.innerHTML += '<a class="topCancion" href="detalle.html?id=' + element.id + '&type=' + element.type + '"><div>' + element.title + '</div></a>'
+                    });
+                    
+                })
+                .catch(function(error){
+                    console.log(error);
+                    
+                })
+            
+
             //artistas seguidos agregar a lista
             
             let recuperaStorage = localStorage.getItem('artistList')
