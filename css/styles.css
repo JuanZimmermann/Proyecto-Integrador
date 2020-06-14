@@ -7,6 +7,7 @@ body{
     background-size: cover;
     margin: unset;
     font-family: sans-serif;
+    height: max-content;
     
     
 }
@@ -279,9 +280,14 @@ display: grid;
 
 /*footer*/
 
+.player-playlist{
+    margin: 10px;
+}
+
 footer{
     align-items: center;
     margin-top: 20px;
+
 }
 .footerContainer{
     display: grid;
@@ -339,25 +345,35 @@ font-size: 20px;
 
 /*Playlist*/
 
+.crear{
+    background-color: #00e8dc;
+    border-radius: 25px ;
+    border: none;
+}
+
 .body-playlist{
     margin: unset;
 }
 
 .playlist-container{
 
+    height: fit-content;
     display: grid;
-height: 500px;
 padding-top: 130px;
+height: 100%;
 
 
 }
 
 .container-playlist{
 
-    width: 60%;
+    width: fit-content;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+   
 
-margin-right : 20% ;
-margin-left: 20%;
+
 border: solid;
 }
 
@@ -461,6 +477,9 @@ font-size: 20px;
     background-color: #00e8dc;
     border-radius: 25px ;
     border: none;
+    width: 300px;
+    margin: 20px;
+    height: 30px;
 }
 
 .cancion-audio{
@@ -621,6 +640,12 @@ font-size: 20px;
 
 
 /*Search*/
+
+.search-button{
+    border-radius: 25px;
+    background-color:  #00e8dc ;
+    border: none;
+}
 
 .resultados{
     width: 90%;

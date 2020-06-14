@@ -1,3 +1,23 @@
+
+
+var boton = document.querySelector('.boton')
+
+
+boton.onclick = function(){
+
+    let confirmar = confirm('¿Estas Seguro? Todas las canciones seran eliminadas de tu playlist')
+    if(confirmar == true){
+        localStorage.clear()
+
+
+    }
+
+
+}
+
+
+
+
 let recuperoStorage = localStorage.getItem('playlist');
 let playlist = JSON.parse(recuperoStorage);
 
@@ -6,7 +26,7 @@ let playlistwrapper = document.querySelector('.listadereproduccion')
 if(recuperoStorage == null || recuperoStorage == '[]'){
 
     playlist =[]
-    playlistwrapper.innerHTML += '<h1> no hay canciones en la playlist </h1>'
+    playlistwrapper.innerHTML += '<h1> Actualmente no hay canciones en tu playlist </h1>'
     }
     
     else{
@@ -29,7 +49,7 @@ if(recuperoStorage == null || recuperoStorage == '[]'){
         })
         .then(function(track){
     
-            playlistwrapper.innerHTML += '<div><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=3000&height=350&color=00e8dc&layout=dark&size=medium&type=tracks&id=' + track.id + '&app_id=1" width="600" height="100"></iframe></div>'
+            playlistwrapper.innerHTML += '<div class ="player-playlist"><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=3000&height=350&color=00e8dc&layout=dark&size=medium&type=tracks&id=' + track.id + '&app_id=1" width="600" height="92"></iframe></div>'
 
             console.log(trackId);
 
@@ -44,6 +64,8 @@ if(recuperoStorage == null || recuperoStorage == '[]'){
      }
     
      console.log(localStorage)
+
+     
      
      
     
