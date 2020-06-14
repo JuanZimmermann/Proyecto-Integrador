@@ -33,7 +33,7 @@ var url = proxy + 'https://api.deezer.com/track/' + artistId;
         })
         .then(function(track){
     
-            artistWrapper.innerHTML += '<li><h3>'+ artistId +'</h3></li>'
+            artistWrapper.innerHTML += '<li><a href="detalle.html"><h3>'+ artistId +'</h3></a></li>'
 
             console.log(artistId);
 
@@ -46,7 +46,7 @@ var url = proxy + 'https://api.deezer.com/track/' + artistId;
     })
     
      }
-    
+    //
 
     /* if(recuperoStorage == null || recuperoStorage == '[]'){
         playlistsFollowed = []
