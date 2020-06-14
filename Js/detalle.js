@@ -274,6 +274,10 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
             let boton = document.querySelector('.boton3')    
             boton.style = 'display: none;'
 
+            let adentrodetalle = document.querySelector('.adentrodetalle')
+
+            adentrodetalle.innerHTML +=  '<div> Artista:  ' + track.artist.name +'</div><div> Fecha de lanzamiento:  '+ track.release_date +'</div>'
+
             let urlAlbum = proxy + 'https://api.deezer.com/album/' + track.id + '/tracks'
             fetch(urlAlbum)
                 .then(function(response){

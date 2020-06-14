@@ -1,19 +1,5 @@
 
 
-var boton = document.querySelector('.boton')
-
-
-boton.onclick = function(){
-
-    let confirmar = confirm('¿Estas Seguro? Todas las canciones seran eliminadas de tu playlist')
-    if(confirmar == true){
-        localStorage.clear()
-
-
-    }
-
-
-}
 
 
 
@@ -64,6 +50,21 @@ if(recuperoStorage == null || recuperoStorage == '[]'){
      }
     
      console.log(localStorage)
+
+     var boton = document.querySelector('.boton')
+
+
+boton.onclick = function(){
+
+    let confirmar = confirm('¿Estas Seguro? Todas las canciones seran eliminadas de tu playlist')
+    if(confirmar == true){
+        localStorage.clear('playlist')
+
+
+    }
+
+
+}
 
      
      
