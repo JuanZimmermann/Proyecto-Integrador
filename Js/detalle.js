@@ -248,6 +248,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
                 }else{
 
                     let agrego = document.querySelector('.boton3')
+                    agrego.innerHTML = 'Dejar de seguir'
                     playlistsFollowed.push(playlistId);
 
                 }
