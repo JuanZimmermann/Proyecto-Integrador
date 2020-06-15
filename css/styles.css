@@ -732,6 +732,13 @@ font-size: 20px;
     margin-top: 30px
     
 }
+.artlist, .playlists{
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: 'Biryani', sans-serif;
+}
 /*Media Queries*/
 
 @media(max-width:768px){

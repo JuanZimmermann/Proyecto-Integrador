@@ -1,14 +1,14 @@
 let recuperaStorage = localStorage.getItem('artistList');
 
-//let recuperoStorage = localStorage.getItem('playlistsFollowed');
+
 
 let artist = JSON.parse(recuperaStorage);
 
-//let playlist = JSON.parse(recuperoStorage);
+
 
 let artistWrapper = document.querySelector('.artlist')
 
-//let playlistWrapper = document.querySelector('.playlists')
+
 
 if(recuperaStorage == null || recuperaStorage == '[]'){
     artistList = []
@@ -46,6 +46,50 @@ var url = proxy + 'https://api.deezer.com/artist/' + artistId;
     })
     
      }
+     console.log(localStorage)
+
+    /* let recuperoStorage = localStorage.getItem('playlistsFollowed');
+
+     let playlist = JSON.parse(recuperoStorage);
+
+     let playlistWrapper = document.querySelector('.playlists')
+
+     if(recuperoStorage == null || recuperoStorage == '[]'){
+        playlistsFollowed = []
+        playlistWrapper.innerHTML += '<h2> No sigues a ningun playlist </h2>'
+    }else{
+        playlist.forEach(function(playlistId){
+            buscarYMostrar(playlistId)
+        })
+    }
+
+    function buscarYMostrar(playlistId){
+
+        var proxy2 = 'https://cors-anywhere.herokuapp.com/'
+        var url2 = proxy2 + 'https://api.deezer.com/playlist/' + playlistId;
+            
+                fetch(url2)
+                 .then( function(response){
+                     return response.json();
+                
+                })
+                .then(function(track){
+            
+                    playlistWrapper.innerHTML += '<li><a href="detalle.html"><h3>'+ track.name +'</h3></a></li>'
+        
+                    console.log(playlistId);
+        
+                   })
+                   
+            
+            .catch(function(error){
+                console.log(error);
+                
+            })
+            
+             }
+
+             console.log(recuperaStorage);*/
 
      /*
 
