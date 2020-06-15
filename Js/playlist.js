@@ -60,13 +60,17 @@ boton.onclick = function(){
 
     let confirmar = confirm('¿Estas Seguro? Todas las canciones seran eliminadas de tu playlist')
     if(confirmar == true){
-        localStorage.clear('playlist')
+        localStorage.removeItem('playlist')
 
 
     }
 
 
 }
+
+
+console.log(localStorage);
+
 
      
      

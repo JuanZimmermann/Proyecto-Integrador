@@ -509,6 +509,12 @@ font-size: 20px;
     gap: 35px;
 
 }
+
+.carousel-a{
+
+    text-decoration: none;
+    color: white;
+}
 .photo1{
 
     margin-top: 110px;
