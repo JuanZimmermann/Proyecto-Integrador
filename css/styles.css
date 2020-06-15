@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
 }
+
 body{
     background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
     background-size: 100%;
@@ -9,9 +10,8 @@ body{
     font-family: sans-serif;
     height: max-content;
     background-repeat: no-repeat;
-    
-    
-}
+    }
+
 .container{
     display: grid;
     gap: 20px;
@@ -786,6 +786,7 @@ font-size: 20px;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
         margin: auto;
+    }
     
 }
 
@@ -924,6 +925,5 @@ font-size: 20px;
         grid-template-columns: 1fr;
         gap: 20px;
         margin: auto;
-    
-
-}
+    }
+}    

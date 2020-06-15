@@ -8,11 +8,13 @@ let recuperoStorage = localStorage.getItem('playlist');
 let playlist = JSON.parse(recuperoStorage);
 
 let playlistwrapper = document.querySelector('.listadereproduccion')
+let body = document.querySelector('.playlist-container')
 
 if(recuperoStorage == null || recuperoStorage == '[]'){
 
     playlist =[]
     playlistwrapper.innerHTML += '<h1> Actualmente no hay canciones en tu playlist </h1>'
+    body.style.height = '600px'
     }
     
     else{
