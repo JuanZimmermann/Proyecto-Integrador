@@ -28,13 +28,13 @@ fetch(url)
         });    
     })
 
-urlArtist = proxy + 'https://api.deezer.com/search/artist?q=' + search + '&limit=9'
+let urlArtist = proxy + 'https://api.deezer.com/search/artist?q=' + search + '&limit=3'
 
 fetch(urlArtist)
     .then(function(response){
         return response.json()
     })
-    .then(function(data){
+    .then(function(datos){
         let listaA = document.querySelector('.results-artist')
         let resultadosA = datos.data
 

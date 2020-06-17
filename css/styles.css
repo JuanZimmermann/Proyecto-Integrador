@@ -287,7 +287,7 @@ display: grid;
 footer{
     align-items: center;
     margin-top: 20px;
-
+    width: 100%;
 }
 .footerContainer{
     display: grid;
