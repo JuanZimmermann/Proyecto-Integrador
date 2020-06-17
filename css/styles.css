@@ -601,7 +601,7 @@ font-size: 20px;
     color: white;
 }
 .photo1{
-
+    margin-left: 50px;
     margin-top: 110px;
     margin-bottom: 20px;
     height: fit-content;
@@ -612,7 +612,7 @@ font-size: 20px;
 }
 .photo1b{
     height: 400px;
-    width: 400px;
+    width: 475px;
     border-radius: 25px;
 }
 
@@ -735,6 +735,49 @@ font-size: 20px;
     font: bolder;
     font-size: 20px;
 }
+
+.artist-related{
+    display: grid;
+    
+    width: 100%;
+    border: #00e8dc ;
+    border-radius: 35px;
+    border-style: double;
+    border-width: thick;
+    
+}
+.artist-related-title{
+    margin-left: 10px;
+    color: white;
+    text-align: center;
+}
+.related-box{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-left: 10px;
+    
+    
+}
+.related-image{
+    width: 150px;
+    height: 120px;
+    border-radius: 25px;
+}
+.related-namebox{
+    padding: 35px;
+
+}
+.related-name{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+.related-link{
+    color: white;
+    text-decoration: none;
+}
+
 
 
 
