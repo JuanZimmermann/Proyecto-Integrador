@@ -289,7 +289,7 @@ display: grid;
 footer{
     align-items: center;
     margin-top: 20px;
-
+    width: 100%;
 }
 .footerContainer{
     display: grid;
@@ -671,11 +671,13 @@ font-size: 20px;
 }
 
 .resultados{
+    display: grid;
     width: 90%;
     margin: auto;
     padding-top: 100px;
+    gap: 15px;
 }
-.results-container, .results-artist{
+.results-container, .results-artist, .results-album{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 6px;
@@ -744,6 +746,14 @@ font-size: 20px;
 }
 .listed{
     padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-family: 'Biryani', sans-serif;
+}
+.follow-alt{
+    padding: 20px;
     margin: auto;
     text-align: center;
     font-size: 25px;

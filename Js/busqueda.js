@@ -28,18 +28,34 @@ fetch(url)
         });    
     })
 
-urlArtist = proxy + 'https://api.deezer.com/search/artist?q=' + search + '&limit=9'
+let urlArtist = proxy + 'https://api.deezer.com/search/artist?q=' + search + '&limit=3'
 
 fetch(urlArtist)
     .then(function(response){
         return response.json()
     })
-    .then(function(data){
+    .then(function(datos){
         let listaA = document.querySelector('.results-artist')
         let resultadosA = datos.data
 
         resultadosA.forEach(element => {
             listaA.innerHTML += '<a class="result-link" href="detalle.html?id=' + element.id + '&type=' + element.type + '"><div class="results"><img src="' + element.picture_small + '"><p>' + element.name + '</p></div></a>'
+        });   
+
+    })
+
+let urlAlbum = proxy + "https://api.deezer.com/search/album?q=" + search + "&limit=6";
+
+fetch(urlAlbum)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(datos){
+        let listaB = document.querySelector('.results-album')
+        let resultadosB = datos.data
+
+        resultadosB.forEach(element => {
+            listaB.innerHTML += '<a class="result-link" href="detalle.html?id=' + element.id + '&type=' + element.type + '"><div class="results"><img src="' + element.cover_small + '"><p>' + element.title + '</p></div></a>'
         });   
 
     })
