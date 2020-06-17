@@ -152,7 +152,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
                     
 
                     respuestaRelated.forEach(element => {
-                        related.innerHTML += '<div class="related-box"><div class="photo-related"><img class="related-image" src="'+ element.picture_medium +'" alt="imagen del artista relacionado"></div><div class="related-namebox"><a class="related-link" href="detalle.html?id=' + element.id + '&type=' + element.type + '"><h3 class="related-name">' + element.name + '</h3></a></div></div>'
+                        related.innerHTML += '<div class="related-box"><div class="photo-related"><img class="related-image" src="'+ element.picture_small +'" alt="imagen del artista relacionado"></div><div class="related-namebox"><a class="related-link" href="detalle.html?id=' + element.id + '&type=' + element.type + '"><h3 class="related-name">' + element.name + '</h3></a></div></div>'
                     });
                     
                 })

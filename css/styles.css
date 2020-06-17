@@ -611,8 +611,6 @@ font-size: 20px;
     width: 100%;
 }
 .photo1b{
-    height: 400px;
-    width: 475px;
     border-radius: 25px;
 }
 
@@ -737,14 +735,9 @@ font-size: 20px;
 }
 
 .artist-related{
-    display: grid;
-    
+    display: grid;  
     width: 100%;
-    border: #00e8dc ;
-    border-radius: 35px;
-    border-style: double;
-    border-width: thick;
-    
+    margin-top: 10%;
 }
 .artist-related-title{
     margin-left: 10px;
@@ -755,23 +748,20 @@ font-size: 20px;
     display: grid;
     grid-template-columns: 1fr 3fr;
     margin-left: 10px;
-    
+    border-bottom: white solid 2px;
     
 }
 .related-image{
-    width: 150px;
-    height: 120px;
-    border-radius: 25px;
+    padding: 40px;
 }
 .related-namebox{
-    padding: 35px;
+    padding-top: 10%;
 
 }
 .related-name{
     color: white;
     text-decoration: none;
     font-size: 20px;
-    text-align: center;
 }
 .related-link{
     color: white;
