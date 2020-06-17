@@ -13,6 +13,9 @@ let artistWrapper = document.querySelector('.artlist')
 if(recuperaStorage == null || recuperaStorage == '[]'){
     artistList = []
     artistWrapper.innerHTML += '<h2> No sigues a ningun artista </h2>'
+
+    let container = document.querySelector('.follow-container')
+    container.style = 'height: 600px'
 }else{
     artist.forEach(function(artistId){
         buscarYMostrar(artistId)
