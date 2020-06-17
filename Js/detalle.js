@@ -22,6 +22,9 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
                 let photo = document.querySelector('.photo1b');
                 photo.src = track.artist.picture_big;
+
+                let related = document.querySelector('.artist-related');
+                related.style = 'display: none;'
             
                 let title = document.querySelector('.detalle-title');
                 title.innerHTML += track.title;
@@ -136,7 +139,29 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
                     console.log(error);
                     
                 })
+
+                urlRelated = proxy + 'https://api.deezer.com/artist/' + track.id + '/related?limit=3'
             
+                fetch(urlRelated)
+                .then(function(response){
+                    return response.json()
+                })
+                .then(function(datos){
+                    let related = document.querySelector('.artist-related')
+                    let respuestaRelated = datos.data
+                    
+
+                    respuestaRelated.forEach(element => {
+                        related.innerHTML += '<div class="related-box"><div class="photo-related"><img class="related-image" src="'+ element.picture_medium +'" alt="imagen del artista relacionado"></div><div class="related-namebox"><a class="related-link" href="detalle.html?id=' + element.id + '&type=' + element.type + '"><h3 class="related-name">' + element.name + '</h3></a></div></div>'
+                    });
+                    
+                })
+                .catch(function(error){
+                    console.log(error);
+                    
+                })
+
+                
 
             //artistas seguidos agregar a lista
             
@@ -186,6 +211,9 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
                 let photo = document.querySelector('.photo1b');
             photo.src = track.picture_big;
+
+            let related = document.querySelector('.artist-related');
+            related.style = 'display: none;'
 
             let title = document.querySelector('.detalle-title');
             title.innerHTML += track.title;
@@ -265,6 +293,9 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
                 let photo = document.querySelector('.photo1b');
             photo.src = track.cover_big;
+
+            let related = document.querySelector('.artist-related');
+                related.style = 'display: none;'
 
             let title = document.querySelector('.detalle-title');
             title.innerHTML += 'Album: ' + track.title;
