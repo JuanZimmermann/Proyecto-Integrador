@@ -36,7 +36,7 @@ var url = proxy + 'https://api.deezer.com/artist/' + artistId;
         })
         .then(function(track){
     
-            artistWrapper.innerHTML += '<div><a href="detalle.html?id=' + track.id + '&type=' + track.type + '"><h3 class="listed">'+ track.name + '</h3></a></div>'
+            artistWrapper.innerHTML += '<div><a class="detalle-subrayado" href="detalle.html?id=' + track.id + '&type=' + track.type + '"><h3 class="listed">'+ track.name + '</h3></a></div>'
 
             console.log(artistId);
 
@@ -88,7 +88,7 @@ var url = proxy + 'https://api.deezer.com/playlist/' + playlistId;
         })
         .then(function(tracks){
     
-            playlistWrapper.innerHTML += '<div><a href="detalle.html?id=' + tracks.id + '&type=' + tracks.type + '"><h3 class="listed">'+ tracks.title + '</h3></a></div>'
+            playlistWrapper.innerHTML += '<div><a class="detalle-subrayado" href="detalle.html?id=' + tracks.id + '&type=' + tracks.type + '"><h3 class="listed">'+ tracks.title + '</h3></a></div>'
 
             console.log(playlistId);
             

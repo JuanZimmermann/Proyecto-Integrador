@@ -1,5 +1,6 @@
 
 
+window.addEventListener('load', function() {
 
 
 
@@ -37,7 +38,7 @@ if(recuperoStorage == null || recuperoStorage == '[]'){
         })
         .then(function(track){
     
-            playlistwrapper.innerHTML += '<div class ="player-playlist"><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=3000&height=350&color=00e8dc&layout=dark&size=medium&type=tracks&id=' + track.id + '&app_id=1" width="600" height="92"></iframe></div>'
+            playlistwrapper.innerHTML += '<div class ="player-playlist">   <div><iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=3000&height=350&color=00e8dc&layout=dark&size=medium&type=tracks&id=' + track.id + '&app_id=1" width="600" height="92"></iframe></div> <div><button class="eliminar-de-playlist">Eliminar</button></div>   </div>'
 
             console.log(trackId);
 
@@ -48,32 +49,46 @@ if(recuperoStorage == null || recuperoStorage == '[]'){
         console.log(error);
         
     })
-    
-     }
-    
-     console.log(localStorage)
 
-     var boton = document.querySelector('.boton')
+     
+
+
+
+
+
+}
+
+
+console.log(localStorage)
+
+var boton = document.querySelector('.boton')
 
 
 boton.onclick = function(){
 
     let confirmar = confirm('¿Estas Seguro? Todas las canciones seran eliminadas de tu playlist')
     if(confirmar == true){
+        
         localStorage.removeItem('playlist')
+    
+        location.reload();
 
 
     }
-
-
 }
 
+let eliminar = document.querySelector('.eliminar-de-playlist');
+
+ eliminar.onclick =  p
 
 console.log(localStorage);
 
 
+
+
+
      
      
      
     
-    
+})
