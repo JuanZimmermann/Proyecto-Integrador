@@ -27,7 +27,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
                 title.innerHTML += track.title;
 
                 let artist = document.querySelector('.detalle-artist');
-                artist.innerHTML += 'Artist: ' + track.artist.name;
+                artist.innerHTML += 'Artista: ' + track.artist.name;
                 artist.href = 'detalle.html?id=' + track.artist.id + '&type=' + track.artist.type;
 
                 let album = document.querySelector('.detalle-album');
@@ -105,10 +105,10 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
                 title.innerHTML += track.name;
 
                 let artist = document.querySelector('.detalle-artist');
-                artist.innerHTML += 'Number of albums: ' + track.nb_album;
+                artist.innerHTML += 'Numero de  albums: ' + track.nb_album;
 
                 let album = document.querySelector('.detalle-album');
-                album.innerHTML += 'Number of fans: ' + track.nb_fan;
+                album.innerHTML += 'Numero de fans: ' + track.nb_fan;
 
                 let player = document.querySelector('.player')    
                 player.style = 'display: none;'
@@ -277,7 +277,7 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
             let adentrodetalle = document.querySelector('.adentrodetalle')
 
-            adentrodetalle.innerHTML =  '<div><a href="detalle.html?id=' + track.artist.id + '&type=' + track.artist.type + '"><div> Artista:  ' + track.artist.name +'</div></a></div> <div> Fecha de lanzamiento:  '+ track.release_date +'</div>'
+            adentrodetalle.innerHTML =  '<div class="artista-album"><a class="artista-en-album" href="detalle.html?id=' + track.artist.id + '&type=' + track.artist.type + '"><div> Artista:  ' + track.artist.name +'</div></a></div> <div> Fecha de lanzamiento:  '+ track.release_date +'</div>'
 
             let urlAlbum = proxy + 'https://api.deezer.com/album/' + track.id + '/tracks'
             fetch(urlAlbum)

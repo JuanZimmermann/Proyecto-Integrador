@@ -1,5 +1,6 @@
 
 
+window.addEventListener('load', function() {
 
 
 
@@ -67,7 +68,10 @@ boton.onclick = function(){
 
     let confirmar = confirm('¿Estas Seguro? Todas las canciones seran eliminadas de tu playlist')
     if(confirmar == true){
+        
         localStorage.removeItem('playlist')
+    
+        location.reload();
 
 
     }
@@ -83,9 +87,8 @@ console.log(localStorage);
 
 
 
-    
-
      
      
      
     
+})
