@@ -12,3 +12,8 @@ ham.onclick = function(){
 
 // LOADER
 
+
+setTimeout(function load(){
+    let loader = document.querySelector('.loader')
+    loader.style.display = 'none'
+}, 3000)

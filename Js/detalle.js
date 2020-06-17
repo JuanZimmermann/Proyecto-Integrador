@@ -305,3 +305,6 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
         .catch(function(errors){
             console.log(errors);
         })
+
+
+    
