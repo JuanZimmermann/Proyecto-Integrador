@@ -12,7 +12,7 @@ let artistWrapper = document.querySelector('.artlist')
 
 if(recuperaStorage == null || recuperaStorage == '[]'){
     artistList = []
-    artistWrapper.innerHTML += '<h2> No sigues a ningun artista </h2>'
+    artistWrapper.innerHTML += '<h2 class="follow-alt"> No sigues a ningun artista </h2>'
 }else{
     artist.forEach(function(artistId){
         buscarYMostrar(artistId)
@@ -64,7 +64,7 @@ let playlistWrapper = document.querySelector('.playlist-list')
 
 if(recuperarStorage == null || recuperarStorage == '[]'){
     playlistsFollowed = []
-    playlistWrapper.innerHTML += '<h2> No sigues a ninguna playlist </h2>'
+    playlistWrapper.innerHTML += '<h2 class="follow-alt"> No sigues a ninguna playlist </h2>'
 }else{
     play.forEach(function(playlistId){
         mostrar(playlistId)
