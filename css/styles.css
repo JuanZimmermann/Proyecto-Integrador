@@ -2,6 +2,79 @@
     box-sizing: border-box;
 }
 
+/* LOADER */
+
+.sk-chase {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    animation: sk-chase 2.5s infinite linear both;
+    
+  }
+  
+  .sk-chase-dot {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0; 
+    animation: sk-chase-dot 2.0s infinite ease-in-out both; 
+  }
+  
+  .sk-chase-dot:before {
+    content: '';
+    display: block;
+    width: 25%;
+    height: 25%;
+    background-color: #fff;
+    border-radius: 100%;
+    animation: sk-chase-dot-before 2.0s infinite ease-in-out both; 
+  }
+  
+  .sk-chase-dot:nth-child(1) { animation-delay: -1.1s; }
+  .sk-chase-dot:nth-child(2) { animation-delay: -1.0s; }
+  .sk-chase-dot:nth-child(3) { animation-delay: -0.9s; }
+  .sk-chase-dot:nth-child(4) { animation-delay: -0.8s; }
+  .sk-chase-dot:nth-child(5) { animation-delay: -0.7s; }
+  .sk-chase-dot:nth-child(6) { animation-delay: -0.6s; }
+  .sk-chase-dot:nth-child(1):before { animation-delay: -1.1s; }
+  .sk-chase-dot:nth-child(2):before { animation-delay: -1.0s; }
+  .sk-chase-dot:nth-child(3):before { animation-delay: -0.9s; }
+  .sk-chase-dot:nth-child(4):before { animation-delay: -0.8s; }
+  .sk-chase-dot:nth-child(5):before { animation-delay: -0.7s; }
+  .sk-chase-dot:nth-child(6):before { animation-delay: -0.6s; }
+  
+  @keyframes sk-chase {
+    100% { transform: rotate(360deg); } 
+  }
+  
+  @keyframes sk-chase-dot {
+    80%, 100% { transform: rotate(360deg); } 
+  }
+  
+  @keyframes sk-chase-dot-before {
+    50% {
+      transform: scale(0.4); 
+    } 100%, 0% {
+      transform: scale(1.0); 
+    } 
+  }
+
+  .loader{
+    border-radius: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    position: absolute;
+    top: 100px;
+    z-index: 1000000;
+}
+
+/*INDEX*/
+
 body{
     background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
     margin: unset;
@@ -289,11 +362,6 @@ display: grid;
 
 
 
-
-
-
-
-
 /*footer*/
 
 .player-playlist{
@@ -557,8 +625,6 @@ font-size: 20px;
     width: 100%;
 }
 .photo1b{
-    height: 400px;
-    width: 475px;
     border-radius: 25px;
 }
 
@@ -683,14 +749,9 @@ font-size: 20px;
 }
 
 .artist-related{
-    display: grid;
-    
+    display: grid;  
     width: 100%;
-    border: #00e8dc ;
-    border-radius: 35px;
-    border-style: double;
-    border-width: thick;
-    
+    margin-top: 10%;
 }
 .artist-related-title{
     margin-left: 10px;
@@ -701,23 +762,20 @@ font-size: 20px;
     display: grid;
     grid-template-columns: 1fr 3fr;
     margin-left: 10px;
-    
+    border-bottom: white solid 2px;
     
 }
 .related-image{
-    width: 150px;
-    height: 120px;
-    border-radius: 25px;
+    padding: 40px;
 }
 .related-namebox{
-    padding: 35px;
+    padding-top: 10%;
 
 }
 .related-name{
     color: white;
     text-decoration: none;
     font-size: 20px;
-    text-align: center;
 }
 .related-link{
     color: white;
