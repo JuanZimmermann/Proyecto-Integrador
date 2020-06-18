@@ -10,6 +10,7 @@ console.log(type);
 let proxy = 'https://cors-anywhere.herokuapp.com/';
 let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
 
+
     fetch(url)
         .then(function(response){
             return response.json();
@@ -336,6 +337,3 @@ let url =  proxy + "https://api.deezer.com/" + type + "/" + trackId;
         .catch(function(errors){
             console.log(errors);
         })
-
-
-    
