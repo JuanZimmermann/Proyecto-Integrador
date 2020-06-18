@@ -464,7 +464,6 @@ padding: 150px;
 
 .container-playlist{
 
-    width: fit-content;
     padding: 20px;
     text-align: center;
     margin: auto;
@@ -475,6 +474,9 @@ border: solid;
 }
 
 .listadereproducion{
+
+    margin: auto;
+}
 
 
 padding-top: 130px;
@@ -891,6 +893,12 @@ font-size: 20px;
 /*Media Queries*/
 
 @media(max-width:768px){
+
+    .playlist-container{
+
+        padding-left: 10px;
+
+    }
 
     .results-container, .results-artist{
         display: grid;
