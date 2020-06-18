@@ -11,7 +11,7 @@ if(recuperoStorage == null || recuperoStorage == '[]'){
 
     playlist =[]
     playlistwrapper.innerHTML += '<h1> Actualmente no hay canciones en tu playlist </h1>'
-    body.style.height = '600px'
+    body.style.height = '100vh'
     }
     
     else{
