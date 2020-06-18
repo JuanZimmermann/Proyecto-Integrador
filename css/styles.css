@@ -948,7 +948,6 @@ font-size: 20px;
         width: 60%;
     }
 
-<<<<<<< HEAD
     .follow-container{
         display: grid;
         grid-template-columns: 1fr;
@@ -961,10 +960,9 @@ font-size: 20px;
         display: grid;
         position: relative;
         top: 100px;
-=======
+    }
     .contenido-genre{
         width: 80%;
->>>>>>> 399925ea882d938cc2f4a5a1fe906d24dce745b2
     }
     
 }
