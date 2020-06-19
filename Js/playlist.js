@@ -38,22 +38,38 @@ if(recuperoStorage == null || recuperoStorage == '[]'){
 
            
 
-           let eliminar = document.querySelector('.eliminar');
+            let eliminar = document.querySelector('.eliminar');
     
 
-           eliminar.onclick =  function(){
+            eliminar.onclick =  function(){
+ 
+             console.log('el boton funciona');
+             
+ 
+             let indiceArray = playlist.indexOf(track.id);
+             playlist.splice(indiceArray, 1);
+             let playlistParaStorage = JSON.stringify(playlist);
+             console.log(playlist);
+             localStorage.setItem('playlist', playlistParaStorage);
+             console.log(localStorage);
+             location.reload()
+        
+    
 
-            console.log('el boton funciona');
+              
+             }
 
-            let indiceArray = playlist.indexOf(track.id);
-            playlist.splice(indiceArray, 1);
-            let playlistParaStorage = JSON.stringify(playlist);
-            console.log(playlist);
-            localStorage.setItem('playlist', playlistParaStorage);
-            console.log(localStorage);
-            location.reload()
             
-         }
+
+           
+              
+               
+           
+    
+
+           
+            
+         
         
 
 
